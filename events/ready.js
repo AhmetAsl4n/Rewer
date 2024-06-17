@@ -6,7 +6,7 @@ module.exports = {
     run: async(client) => {
         console.log(`${client.user.tag} Aktif!`);
         client.user.setPresence({
-            activities: [{ name: "HENTAI", type: ActivityType.Watching }],
+            activities: [{ name: "SeaDevils TEAM ", type: ActivityType.Watching }],
             status: 'idle',
         });
     }
