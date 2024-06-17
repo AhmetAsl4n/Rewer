@@ -2,19 +2,19 @@ const { Client, EmbedBuilder, PermissionsBitField } = require("discord.js");
 const Discord = require("discord.js")
 const db = require("croxydb")
 module.exports = {
-  name: "buton-rol",
-  description: " Rol alma sistemini ayarlarsın!",
+  name: "button-rol",
+  description: " You create the role-playing system!",
   type: 1,
   options: [
     {
-        name:"rol",
-        description:"Lütfen bir rol etiketle!",
+        name:"role",
+        description:"Please tag a role!",
         type:8,
         required:true
     },
     {
-      name:"yazı",
-      description:"Lütfen bir embed mesaj yazısı gir!",
+      name:"text",
+      description:"Please enter an embed message post!",
       type:3,
       required:true
   },
@@ -26,12 +26,12 @@ module.exports = {
  
  if(!interaction.member.permissions.has(PermissionsBitField.Flags.ManageRoles)) return interaction.reply({content: "❌ | Rolleri Yönet Yetkin Yok!", ephemeral: true})
   
- const rol = interaction.options.getRole('rol')
- const yazı = interaction.options.getString('yazı')
+ const rol = interaction.options.getRole('role')
+ const yazı = interaction.options.getString('text')
 
  let buttonid = rol.name
  const embed = new EmbedBuilder()
- .setTitle("Dyto - Buton Rol Al Sistemi!")
+ .setTitle("SeaDevils - Button Role System!")
  .setDescription(`${yazı}`)
  .setColor("#ff0000")
  const row = new Discord.ActionRowBuilder()
