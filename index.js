@@ -85,6 +85,7 @@ client.on('messageCreate', msg => {
 													msg.reply('as cnm la naber 😋');
 													}
   });
+
 // 
 
 console.log(`[-] ${fs.readdirSync("./events").length} olay algılandı.`)
